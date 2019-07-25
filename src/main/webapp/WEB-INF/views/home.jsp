@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>나의 심플 메모장</title>
+<title>심플게시판</title>
 <link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/main.css?ver=2019072401">
-<link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/list.css?ver=20190719">
-<link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/button.css?ver=20190719">
+<link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/list.css?ver=20190725">
+<link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/button.css?ver=2019072501">
 <link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/input.css?ver=20190719">
-<link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/view.css?ver=20190719">
+<link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/view.css?ver=2019072501">
 <link rel="stylesheet" type="text/css" href="${rootPath}/resources/css/login.css?ver=20190719">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -20,11 +20,14 @@
 	<p></p>
 	<section>
 		<c:choose>
-			<c:when test="${BODY == 'MEMO'}">
+			<c:when test="${BODY == 'BBS_LIST'}">
+				<%@ include file="/WEB-INF/views/body/bbs/list.jspf" %>
 			</c:when>
-			<c:when test="${BODY == 'MEMO_WRITE'}">
+			<c:when test="${BODY == 'BBS_WRITE'}">
+				<%@ include file="/WEB-INF/views/body/bbs/write.jspf" %>
 			</c:when>
-			<c:when test="${BODY == 'MEMO_VIEW'}">
+			<c:when test="${BODY == 'BBS_VIEW'}">
+				<%@ include file="/WEB-INF/views/body/bbs/view.jspf" %>
 			</c:when>
 			<c:when test="${BODY == 'AJAX'}">
 			</c:when>
